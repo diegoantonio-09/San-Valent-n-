@@ -1,0 +1,89 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Catalina Andrea 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      z-index: 1;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    button {
+      padding: 14px 30px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #4CAF50;
+      color: white;
+    }
+
+    #no {
+      background: #f44336;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Música romántica -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+    <h1>💘 Catalina Andrea 💘</h1>
+    <p>¿Quieres ser mi San Valentín? 🌹</p>
+    <button id="yes" onclick="aceptar()">Sí 💖</button>
+    <button id="no" onmouseover="moverNo()">No 💔</button>
+  </div>
+
+  <script>
+    function aceptar() {
+      alert("Sabía que dirías que sí 🥰💖\nTe amo muchísimo ❤️");
+    }
+
+    function moverNo() {
+      const noBtn = document.getElementById("no");
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 60);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
